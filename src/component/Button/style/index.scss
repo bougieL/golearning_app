@@ -1,0 +1,14 @@
+.bd-button {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: border, box-shadow .3s ease;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  &:focus, &:hover{
+    border: 1px solid #bbb;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+  }
+}

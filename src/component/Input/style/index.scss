@@ -1,0 +1,14 @@
+.bd-input {
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  outline: none;
+  background: #fff;
+  border-radius: 4px;
+  transition: border, box-shadow .3s ease;
+  width: 100%;
+  &:focus, &:hover{
+    border: 1px solid #bbb;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+  }
+}

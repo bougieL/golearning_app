@@ -5,3 +5,6 @@ export * from './Input';
 export * from './FormItem';
 export * from './Button';
 export * from './Form';
+export * from './Title';
+export * from './Modal';
+export * from './MessageBox';

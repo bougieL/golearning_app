@@ -1,14 +1,17 @@
+@import '@/style';
+
 .bd-input {
-  border: 1px solid #ccc;
+  @include font('content');
+  $border: palette('border');
+  border: 1px solid $border;
   padding: 10px;
-  box-sizing: border-box;
   outline: none;
-  background: #fff;
-  border-radius: 4px;
-  transition: border, box-shadow .3s ease;
+  background: palette('background');
+  border-radius: $borderRadiusPrimary;
   width: 100%;
+  transition: $transitionPrimary;
   &:focus, &:hover{
-    border: 1px solid #bbb;
-    box-shadow: 0 0 8px rgba(0,0,0,.3);
+    background: palette('background_light');
+    border: 1px solid darken($border, $darkenMount);
   }
 }

@@ -1,13 +1,7 @@
 import * as React from 'react';
+import {ITableProps} from './interface'
 
-interface IProps {
-  columns: Array<{
-    name: string,
-    dataIndex?: string | number
-  }>
-}
-
-export default class Header extends React.Component<IProps> {
+export default class Header extends React.Component<ITableProps> {
   public render() {
     const {columns} = this.props
     return <thead>

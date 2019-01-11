@@ -1,15 +1,7 @@
 import * as React from 'react'
+import {ITableProps} from './interface'
 
-interface IProps {
-  columns: Array<{
-    name: string,
-    dataIndex?: string | number,
-    render?: () => any
-  }>,
-  data: object[]
-}
-
-export default class Body extends React.Component<IProps> {
+export default class Body extends React.Component<ITableProps> {
   public renderRow = (data: object, i: number) => {
     const {columns} = this.props
     return <tr key={i}>
@@ -19,7 +11,7 @@ export default class Body extends React.Component<IProps> {
           if (dataIndex) {
             return <td key={oi}>{data[dataIndex]}</td>
           } else if (render) {
-            return <td key={oi}>{render()}</td>
+            return <td key={oi}>{render(data)}</td>
           } else {
             return <td key={oi} />
           }

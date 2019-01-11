@@ -1,15 +1,16 @@
-@import '@/style/mixin';
+@import '@/style';
 
 .bd-table {
+  $background: palette('background');
+  background: palette('background_light');
   width: 100%;
   border-collapse: collapse;
   thead {
-    background: #ddd;
-    box-shadow: 0 2px 2px rgba(0,0,0,.3);
+    background: darken($background, $darkenMount);
   }
   tr{
     &:nth-child(even) {
-      background: #ddd;
+      background: darken($background, $darkenMount);
     }
   }
   th, td {

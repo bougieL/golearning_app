@@ -1,6 +1,11 @@
-import axios from 'axios';
+import axios from 'axios'
+import {jsonToForm} from '@/util'
 
-const baseUrl = 'http://localhost:8001/api'
+const service = axios.create({
+  baseURL: '/api',
+  timeout: 5000,
+  transformRequest: jsonToForm
+})
 
 interface IParam {
   data?: any,
@@ -15,13 +20,10 @@ export interface IBase {
   message: string
 }
 
-export default async function http(param: IParam) {
-  param.url = baseUrl + param.url
-  const {data: {code, data, message }} = await axios(param)
-  if (code !== 200) {
-    // console.error(data)
+export default async function http(param: IParam): Promise<any> {
+  const {data: {data, code, message}} = await service(param)
+  if (code < 200 || code > 300) {
     alert(message)
-    return
   }
   return data
 }

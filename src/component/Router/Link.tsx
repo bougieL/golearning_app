@@ -1,6 +1,5 @@
 import * as React from 'react';
 import {NavLink as Link} from 'react-router-dom';
-import './style/Link.scss'
 
 interface IProps {
   list: Array<{

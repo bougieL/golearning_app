@@ -1,14 +1,49 @@
+@import '@/style';
+
 .bd-button {
+  @include font('content');
   border: none;
   outline: none;
-  padding: 10px 15px;
-  border-radius: 4px;
-  transition: border, box-shadow .3s ease;
-  border: 1px solid #ccc;
-  background: #fff;
+  padding: 4px 6px;
+  border-radius: $borderRadiusPrimary;
+  transition: $transitionPrimary;
   cursor: pointer;
-  &:focus, &:hover{
-    border: 1px solid #bbb;
-    box-shadow: 0 0 8px rgba(0,0,0,.3);
+  &-primary {
+    $background: palette('primary');
+    background: $background;
+    color: palette('content_light');
+    &:focus, &:hover{
+      background: lighten($color: $background, $amount: $lightenMount);
+    }
+  }
+  &-success {
+    $background: palette('success');
+    background: $background;
+    color: palette('content_light');
+    &:focus, &:hover{
+      background: lighten($color: $background, $amount: $lightenMount);
+    }
+  }
+  &-warning {
+    $background: palette('warning');
+    background: $background;
+    color: palette('content_light');
+    &:focus, &:hover{
+      background: lighten($color: $background, $amount: $lightenMount);
+    }
+  }
+  &-error {
+    $background: palette('error');
+    background: $background;
+    color: palette('content_light');
+    &:focus, &:hover{
+      background: lighten($color: $background, $amount: $lightenMount);
+    }
+  }
+  &-disable {
+    $background: palette('disable');
+    background: $background;
+    color: lighten(palette('content'), $lightenMount);
+    cursor: not-allowed;
   }
 }

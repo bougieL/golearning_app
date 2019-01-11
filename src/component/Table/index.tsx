@@ -1,18 +1,10 @@
 import * as React from 'react'
 import Header from './Header'
 import Body from './Body'
-import './style/index.scss'
+import {ITableProps} from './interface'
+import './style'
 
-interface IProps {
-  columns: Array<{
-    name: string,
-    dataIndex?: string | number,
-    render?: () => any
-  }>,
-  data: object[]
-}
-
-export class Table extends React.Component<IProps> {
+export class Table extends React.Component<ITableProps> {
   public render() {
     const {columns = [], data = []} = this.props
     return <table className="bd-table">
@@ -21,3 +13,5 @@ export class Table extends React.Component<IProps> {
     </table>
   }
 }
+
+export * from './interface'

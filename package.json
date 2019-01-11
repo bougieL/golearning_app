@@ -112,5 +112,10 @@
     "presets": [
       "react-app"
     ]
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://10.234.9.19:8001"
+    }
   }
 }

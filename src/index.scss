@@ -1,0 +1,21 @@
+@import './style';
+
+html, body {
+  margin: 0;
+  padding: 0;
+  color: palette('content');
+}
+
+div, section, ul, ol, li, p, h1, h2, h3, h4, input{
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hide {
+  display: none!important;
+}

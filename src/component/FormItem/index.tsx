@@ -1,5 +1,5 @@
 import * as React from 'react'
-import './style/index.scss'
+import './style'
 
 interface IProps {
   label?: string,

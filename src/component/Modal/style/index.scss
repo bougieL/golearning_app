@@ -1,0 +1,43 @@
+@import '@/style';
+
+.bd-modal {
+  min-width: 20%;
+  // border: 1px solid palette('border');
+  background: palette('background');
+  border-radius: $borderRadiusPrimary;
+  $padding: 10px 15px;
+  &-header {
+    @include flex(space-between);
+    border-bottom: 1px solid palette('border');
+    padding: $padding;
+  }
+  &-content {
+    border-bottom: 1px solid palette('border');
+    padding: $padding;
+  }
+  &-footer {
+    @include flex(flex-end);
+    padding: $padding;
+    .bd-button{
+      margin-right: 10px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &-title {
+    @include font('title');
+  }
+  &-close {
+    cursor: pointer;
+  }
+  &-mask {
+    @include flex;
+    background: palette('mask');
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

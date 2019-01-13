@@ -3,12 +3,14 @@ interface IThis {
   state: object
 }
 
+type Tcb = () => void
+
 export class Binder {
   private that: IThis
   constructor(that: IThis) {
     this.that = that
   }
-  public text(key: string, cb?: () => void) {
+  public text(key: string, cb?: Tcb) {
     const {that} = this
     return {
       onChange: (v: any) => {
@@ -19,7 +21,7 @@ export class Binder {
       value: that.state[key]
     }
   }
-  public modal(key: string, cb? :() => void) {
+  public modal(key: string, cb?: Tcb) {
     const {that} = this
     return {
       onCancel: () => {

@@ -5,10 +5,13 @@
   background: palette('background_light');
   width: 100%;
   border-collapse: collapse;
+  border: 1px solid palette('border');
   thead {
-    background: darken($background, $darkenMount);
+    // background: darken($background, $darkenMount);
+    background: palette('background');
   }
   tr{
+    border-bottom: 1px solid palette('border');
     &:nth-child(even) {
       background: darken($background, $darkenMount);
     }

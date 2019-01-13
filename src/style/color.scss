@@ -34,7 +34,8 @@ $palette: (
   // 标题
   title: #17233d,
   // 正文
-  content: #515a6e,
+  // content: #515a6e,
+  content: #333,
   // 辅助 图标
   sub: #808695,
   // 失效
@@ -52,7 +53,7 @@ $palette: (
   // 浅色字
   content_light: #fff,
   // 弹层兜底
-  mask: rgba(0, 0, 0, .3)
+  mask: rgba(0, 0, 0, .5)
 );
 
 @function palette($c) {

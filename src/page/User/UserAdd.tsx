@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {Form, FormItem, Input, Button, Title} from '@/component'
-import {Binder, emitter} from '@/util'
+import {Binder, emitter, encrypt} from '@/util'
 import {postUser} from '@/service'
 import {USER_ADD_NEW} from '@/constant'
 
@@ -16,8 +16,10 @@ export default class UserAdd extends React.Component<any, IState> {
   }
   public bd = new Binder(this)
   public handleSubmit = async () => {
-    const data = await postUser(this.state)
-    emitter.emit(USER_ADD_NEW)
+    const user = {...this.state}
+    user.password = encrypt(user.password)
+    const data = await postUser(user)
+    emitter.emit(USER_ADD_NEW, data)
   }
   public render() {
     return <>

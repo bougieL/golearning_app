@@ -8,3 +8,5 @@ export * from './Form';
 export * from './Title';
 export * from './Modal';
 export * from './MessageBox';
+export * from './Upload';
+export * from './Notice';

@@ -3,9 +3,10 @@
 .bd-menu {
   @include flex(flex-start);
   padding: 0 10px;
-  background: palette('background');
+  background: palette('background_light');
   font-weight: bold;
-  border-bottom: 1px solid palette('border');
+  box-shadow: $boxShadowPrimary;
+  border-radius: $borderRadiusPrimary;
   // box-shadow: 0 0 4px rgba(0,0,0,.3);
   a {
     display: block;

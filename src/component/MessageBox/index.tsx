@@ -13,10 +13,11 @@ function confirm(props: IConfirm): any {
 
 function next({title = '提示', message = '确定'}: IConfirm): Promise<any> {
   return new Promise((resolve, reject) => {
-    const div = document.createElement('div')
+    let div: any = document.createElement('div')
     const component = React.createElement(Modal, {
       onCancel: () => {
         ReactDOM.unmountComponentAtNode(div)
+        div = null
       },
       promise: {
         reject,
@@ -26,7 +27,6 @@ function next({title = '提示', message = '确定'}: IConfirm): Promise<any> {
     }, message)
     ReactDOM.render(component, div)
   })
-  
 }
 
 export const MessageBox = {

@@ -1,13 +1,11 @@
 import * as React from 'react'
 import {Modal, IModalProps, Button} from '@/component'
-import {Binder} from '@/util'
 
 interface IProps extends IModalProps {
   promise: {
     reject: () => void,
     resolve: () => void,
-  },
-  willUnmount?: () => void
+  }
 }
 
 interface IState {
@@ -16,19 +14,19 @@ interface IState {
 
 export class MessageBox extends React.Component<IProps, IState> {
   public state = {
-    visible: true
+    visible: false
   }
-  public bd = new Binder(this)
+  public ref: React.RefObject<any> = React.createRef()
   public handleFooterClick (action: string) {
-    const {promise: {resolve, reject}} = this.props
-    if (action === 'cancel') {
+    const {promise: {resolve, reject}, onCancel} = this.props
+    if (onCancel) {
+      this.ref.current.handleOnCancel()
+    }
+    if (action === 'cancel' && reject) {
       reject()
-    } else if(action === 'confirm') {
+    } else if(action === 'confirm' && resolve) {
       resolve()
     }
-    this.setState({
-      visible: false
-    })
   }
   public renderFooter = () => {
     return <>
@@ -36,12 +34,20 @@ export class MessageBox extends React.Component<IProps, IState> {
       <Button onClick={this.handleFooterClick.bind(this, 'confirm')}>确定</Button>
     </>
   }
+  public componentDidMount() {
+    this.setState({
+      visible: true
+    })
+  }
   public render() {
     const {children, title, onCancel} = this.props
+    const {visible} = this.state
     return <Modal
+      ref={this.ref}
       title={title}
-      {...this.bd.modal('visible', onCancel)}
+      visible={visible}
       footer={this.renderFooter}
+      onCancel={onCancel}
       >{children}</Modal>
   }
 }

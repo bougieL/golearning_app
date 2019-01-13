@@ -1,12 +1,16 @@
 @import '@/style';
 
 .bd-formitem {
-  @include flex;
   margin-bottom: 10px;
-  justify-content: flex-start;
   &-label {
     width: 90px;
     margin-left: 10px;
     flex-shrink: 0;
+  }
+  &-verticalcenter {
+    @include flex(flex-start);
+  }
+  &-verticaltop {
+    @include flex(center, flex-start);
   }
 }

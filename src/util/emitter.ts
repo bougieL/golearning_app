@@ -23,11 +23,11 @@ class EventEmitter {
   public un(eventName: string): void {
     this.eventMap.delete(eventName)
   }
-  public emit(eventName: string, data?): void {
+  public emit(eventName: string, ...data: any): void {
     const event = this.eventMap.get(eventName)
     if (event) {
       const {action, once} = event
-      action.apply(this)
+      action.apply(this, data)
       if (once) {
         this.un(eventName)
       }

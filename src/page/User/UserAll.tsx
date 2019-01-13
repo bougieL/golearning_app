@@ -27,8 +27,7 @@ export default class UserAll extends React.Component<any, IState> {
   }
   public componentDidMount() {
     this.getTableData()
-    emitter.on(USER_ADD_NEW, () => {
-      console.log('emit')
+    emitter.on(USER_ADD_NEW, data => {
       this.getTableData()
     })
   }
@@ -40,6 +39,8 @@ export default class UserAll extends React.Component<any, IState> {
     }).then(async () => {
       await deleteUserByID(id)
       this.getTableData()
+    }).catch(() => {
+      console.log('取消')
     })
   }
   public async getTableData() {

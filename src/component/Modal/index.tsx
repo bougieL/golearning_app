@@ -57,8 +57,10 @@ export class Modal extends React.Component<IModalProps, IState> {
                 <span className="bd-modal-title">{title}</span>
                 <span className="bd-modal-close" onClick={this.handleOnCancel}>&times;</span>
               </div>
-              <div className="bd-modal-content">{children}</div>
-              <div className="bd-modal-footer">{footer ? footer() : null}</div>
+              <div className={classNames("bd-modal-content", {
+                "bd-modal-content-bordernone": !footer
+              })}>{children}</div>
+              {footer ? <div className="bd-modal-footer">{footer()}</div> : null}
             </div>
           </CSSTransition>
         </div>

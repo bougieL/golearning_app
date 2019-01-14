@@ -2,6 +2,7 @@ import Home from '@/page/Home'
 import Login from '@/page/Login'
 import User from '@/page/User'
 import Image from '@/page/Image'
+import Components from '@/page/Components'
 
 export default [
   {
@@ -20,5 +21,9 @@ export default [
   {
     component: Image,
     path: '/image'
+  },
+  {
+    component: Components,
+    path: '/components'
   }
 ]

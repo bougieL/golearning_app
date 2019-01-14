@@ -1,5 +1,6 @@
 @import './style';
 
+// --------------reset--------------
 html, body {
   margin: 0;
   padding: 0;
@@ -25,4 +26,21 @@ ul, ol, li {
 
 .hide {
   display: none!important;
+}
+
+// --------------class--------------
+.f-s {
+  @include flex(flex-start);
+}
+
+.f-c {
+  @include flex;
+}
+
+.f-e {
+  @include flex(flex-end);
+}
+
+.b-s {
+  width: 20px;
 }

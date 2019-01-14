@@ -13,7 +13,7 @@
   tr{
     border-bottom: 1px solid palette('border');
     &:nth-child(even) {
-      background: darken($background, $darkenMount);
+      background: palette('background');
     }
   }
   th, td {

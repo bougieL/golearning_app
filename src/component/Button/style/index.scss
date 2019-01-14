@@ -13,7 +13,7 @@
     $background: palette('primary');
     background: $background;
     color: palette('content_light');
-    &:focus, &:hover{
+    &:active, &:hover{
       background: lighten($color: $background, $amount: $lightenMount);
     }
   }
@@ -21,7 +21,7 @@
     $background: palette('success');
     background: $background;
     color: palette('content_light');
-    &:focus, &:hover{
+    &:active, &:hover{
       background: lighten($color: $background, $amount: $lightenMount);
     }
   }
@@ -29,7 +29,7 @@
     $background: palette('warning');
     background: $background;
     color: palette('content_light');
-    &:focus, &:hover{
+    &:active, &:hover{
       background: lighten($color: $background, $amount: $lightenMount);
     }
   }
@@ -37,7 +37,7 @@
     $background: palette('error');
     background: $background;
     color: palette('content_light');
-    &:focus, &:hover{
+    &:active, &:hover{
       background: lighten($color: $background, $amount: $lightenMount);
     }
   }

@@ -19,5 +19,9 @@ export default [
   {
     name: 'APPLICATION',
     to: '/application', 
+  },
+  {
+    name: 'COMPONENTS',
+    to: '/components'
   }
 ]

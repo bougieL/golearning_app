@@ -4,14 +4,14 @@
   width: 100%;
   &-file {
     @include flex(space-between);
-    // cursor: pointer;
-    // margin-top: 10px;
-    padding: 5px;
+    padding: 5px 10px;
     width: 100%;
     border-radius: $borderRadiusPrimary;
-    // transition: $transitionPrimary;
+    transition: $transitionPrimary;
+    border: 1px solid transparent;
     &:hover {
-      background: darken(palette('background'), $darkenMount);
+      background: palette('background');
+      border: 1px solid palette('border');
       .remove {
         display: block;
       }
@@ -20,5 +20,8 @@
       cursor: pointer;
       display: none;
     }
+  }
+  &-files {
+    margin-top: 5px;
   }
 }

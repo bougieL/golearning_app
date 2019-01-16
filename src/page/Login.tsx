@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Input, FormItem, Button, Form, Modal} from '@/component';
+import {Input, Button, Form, Modal} from '@/component';
 import {Binder} from '@/util'
 // import {loginValidate} from '@/service'
 
@@ -9,7 +9,7 @@ interface IState {
   visible: boolean
 }
 
-export default class Login extends React.Component<null, IState> {
+export class Login extends React.Component<null, IState> {
   public state = {
     password: '',
     username: '',
@@ -28,20 +28,21 @@ export default class Login extends React.Component<null, IState> {
     // await loginValidate(data)
   }
   public render() {
+    console.log(Form.FormItem)
     return <>
       <Modal title="biaoti" {...this.bd.modal('visible')}>
         1111
       </Modal>
       <Form>
-        <FormItem label="username">
+        <Form.FormItem label="username">
           <Input {...this.bd.text('username')} />
-        </FormItem>
-        <FormItem label="password">
+        </Form.FormItem>
+        <Form.FormItem label="password">
           <Input {...this.bd.text('password')} type="password" />
-        </FormItem>
-        <FormItem>
+        </Form.FormItem>
+        <Form.FormItem>
           <Button onClick={this.handleSubmit}>Login</Button>
-        </FormItem>
+        </Form.FormItem>
       </Form>
     </>
   }

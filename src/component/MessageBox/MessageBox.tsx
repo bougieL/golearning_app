@@ -31,7 +31,8 @@ export class MessageBox extends React.Component<IProps, IState> {
   public renderFooter = () => {
     return <>
       <Button onClick={this.handleFooterClick.bind(this, 'cancel')}>取消</Button>
-      <Button onClick={this.handleFooterClick.bind(this, 'confirm')}>确定</Button>
+      <span className="b-s" />
+      <Button type="primary" onClick={this.handleFooterClick.bind(this, 'confirm')}>确定</Button>
     </>
   }
   public componentDidMount() {

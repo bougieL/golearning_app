@@ -53,7 +53,9 @@ $palette: (
   // 浅色字
   content_light: #fff,
   // 弹层兜底
-  mask: rgba(0, 0, 0, .5)
+  mask: rgba(0, 0, 0, .5),
+  // active边框
+  border_active: rgba(40, 140, 240, .5)
 );
 
 @function palette($c) {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {Form, FormItem, Upload, Title} from '@/component'
 
-export default class Image extends React.Component {
+export class Image extends React.Component {
   public render() {
     return <>
       <Title>Image Add:</Title>

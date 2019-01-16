@@ -119,7 +119,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "http://localhost:8001"
+      "target": "http://10.234.9.19:8001"
     }
   }
 }

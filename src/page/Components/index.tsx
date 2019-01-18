@@ -6,6 +6,8 @@ import {MessageBoxD} from './MessageBox'
 import {TableD} from './Table'
 import { IconD } from './Icon'
 import {TabsD} from './Tabs'
+import {CheckBoxD} from './CheckBox'
+import {RadioD} from './Radio'
 
 export class Components extends React.Component {
   public render() {
@@ -16,7 +18,9 @@ export class Components extends React.Component {
       <NoticeD />
       <MessageBoxD />
       <TabsD />
+      <CheckBoxD />
       <TableD />
+      <RadioD />
     </>
   }
 }

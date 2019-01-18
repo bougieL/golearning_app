@@ -1,3 +1,10 @@
+/**
+ * convert json to FormData
+ *
+ * @export
+ * @param {object} data
+ * @returns {FormData}
+ */
 export function jsonToForm(data: object): FormData {
   const form = new FormData()
   for (const key in data) {

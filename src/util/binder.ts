@@ -32,4 +32,17 @@ export class Binder {
       visible: that.state[key]
     }
   }
+  public checkBox(key: string, cb?: Tcb) {
+    const {that} = this
+    return {
+      checked: that.state[key],
+      onChange: () => {
+        that.setState((prevState: any) => {
+          return {
+            [key]: !prevState[key]
+          }
+        }, cb)
+      }
+    }
+  }
 }

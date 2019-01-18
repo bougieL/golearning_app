@@ -1,0 +1,27 @@
+@import '@/style';
+
+.bd-radio {
+  @include flex;
+  cursor: pointer;
+  input {
+    display: none;
+    &:checked {
+      &+.bd-radio-icon {
+        border-color: palette('primary');
+      }
+    }
+  }
+  .bd-radio-icon {
+    @include flex;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid palette('border');
+    div {
+      background: palette('primary');
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  }
+}

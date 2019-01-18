@@ -13,12 +13,13 @@
       background: palette('background');
       border: 1px solid palette('border');
       .remove {
-        display: block;
+        opacity: 1;
       }
     }
     .remove {
       cursor: pointer;
-      display: none;
+      transition: $transitionPrimary;
+      opacity: 0;
     }
   }
   &-files {

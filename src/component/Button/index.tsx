@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {Icon} from '@/component'
+import {Icon} from '../Icon'
 import { classNames } from '@/util'
 import './style'
 

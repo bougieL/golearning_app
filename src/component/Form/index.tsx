@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {FormItem} from '@/component'
+import {FormItem} from '../FormItem'
 
 interface IProps {
   children?: any,

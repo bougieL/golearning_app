@@ -27,7 +27,7 @@ export class TableD extends React.Component {
   }
   public componentDidMount() {
     const data = []
-    for(let i = 0; i < 100; i++) {
+    for(let i = 0; i < 10; i++) {
       data.push({
         grade: ['A', 'B', 'C', 'D', 'E'][Math.round(Math.random() * 4)],
         name: '张三',

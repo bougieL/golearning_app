@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {Tabs, Title} from '@/component'
+import {appendStyle} from '@/util'
 
 export class TabsD extends React.Component {
   public state = {
@@ -17,17 +18,18 @@ export class TabsD extends React.Component {
       value: 4
     }]
   }
+  public componentDidMount() {
+    appendStyle('.tabs-wrap .bd-tabpane', {
+      marginTop: '5px',
+      padding: '5px',
+    })
+  }
   public render() {
-    console.log(Tabs.TabPane)
     const {list} = this.state
     return <>
       <Title>Tabs</Title>
-      <div className="f-s">
+      <div className="f-s tabs-wrap">
         <Tabs list={list}>
-          {/* <TabPane>111</TabPane>
-          <TabPane>222</TabPane>
-          <TabPane>333</TabPane>
-          <TabPane>444</TabPane> */}
           <Tabs.TabPane>111</Tabs.TabPane>
           <Tabs.TabPane>222</Tabs.TabPane>
           <Tabs.TabPane>333</Tabs.TabPane>

@@ -19,8 +19,8 @@ export class Components extends React.Component {
       <MessageBoxD />
       <TabsD />
       <CheckBoxD />
-      <TableD />
       <RadioD />
+      <TableD />
     </>
   }
 }

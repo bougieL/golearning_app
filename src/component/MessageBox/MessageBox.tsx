@@ -1,5 +1,6 @@
 import * as React from 'react'
-import {Modal, IModalProps, Button} from '@/component'
+import {Modal, IModalProps} from '../Modal'
+import {Button} from '../Button'
 
 interface IProps extends IModalProps {
   promise: {

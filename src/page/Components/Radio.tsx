@@ -11,7 +11,7 @@ export class RadioD extends React.Component {
   }
   public render() {
     return <>
-      <Title>CheckBox</Title>
+      <Title>Radio</Title>
       <div className="f-s">
         <Radio value={11}>11</Radio>
         <span className="b-s" />

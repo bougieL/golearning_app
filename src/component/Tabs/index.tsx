@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {classNames} from '@/util'
-import {TabPane} from '@/component'
+import {TabPane} from '../TabPane'
 import './style'
 
 interface IProps {

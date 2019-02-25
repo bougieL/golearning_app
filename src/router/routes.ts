@@ -1,4 +1,4 @@
-import {Home, Login, User, Image, Components} from '@/page'
+import {Home, Login, User, Image, Components, Containers} from '@/page'
 
 export default [
   {
@@ -17,6 +17,10 @@ export default [
   {
     component: Image,
     path: '/image'
+  },
+  {
+    component: Containers,
+    path: '/containers'
   },
   {
     component: Components,

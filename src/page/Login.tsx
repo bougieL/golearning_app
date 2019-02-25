@@ -1,5 +1,5 @@
-import * as React from 'react';
-import {Input, Button, Form, Modal} from '@/component';
+import * as React from 'react'
+import {Input, Button, Form, Modal} from '@/component'
 import {Binder} from '@/util'
 // import {loginValidate} from '@/service'
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 import {ITableProps} from './interface'
 
 export default class Header extends React.Component<ITableProps> {

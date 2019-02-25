@@ -21,6 +21,10 @@ export default [
     to: '/application', 
   },
   {
+    name: 'CONTAINERS',
+    to: '/containers', 
+  },
+  {
     name: 'COMPONENTS',
     to: '/components'
   }
